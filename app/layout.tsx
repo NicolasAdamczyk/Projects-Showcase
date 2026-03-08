@@ -10,9 +10,8 @@ export const metadata = {
   title: "Nicolas Adamczyk | Showcase",
   description: "Developer specializing in AI & Computer Vision - Available for apprenticeship.",
   openGraph: {
-    title: "Nicolas Adamczyk | Portfolio",
+    title: "Nicolas Adamczyk | Showcase",
     description: "Developer specializing in AI & Computer Vision - Available for apprenticeship.",
-    url: "https://ton-site.vercel.app",
     siteName: "Portfolio Nicolas Adamczyk",
     locale: "fr_FR",
     type: "website",
