@@ -10,7 +10,7 @@ interface ProjectProps {
   image?: string;    
   github?: string;  
   live?: string;
-  index: number; // On récupère l'index pour le timing interne
+  index: number; 
 }
 
 export default function ProjectCard({ title, description, tags, bullets, image, github, live, index }: ProjectProps) {
@@ -50,7 +50,7 @@ export default function ProjectCard({ title, description, tags, bullets, image, 
                   <li 
                     key={i} 
                     className="flex items-start gap-3 text-[12px] text-zinc-400 leading-relaxed text-justify animate-slide-right opacity-0"
-                    style={{ animationDelay: `${1300 + (index * 200) + (i * 100)}ms` }} // Cascade liée à la carte + index de puce
+                    style={{ animationDelay: `${1300 + (index * 200) + (i * 100)}ms` }} 
                   >
                     <div className="flex items-center h-5 shrink-0 translate-y-[1px]">
                       <span className="text-emerald-500 select-none text-[10px]">▹</span>
@@ -73,7 +73,7 @@ export default function ProjectCard({ title, description, tags, bullets, image, 
           </div>
         </div>
 
-        {/* Tags et Liens (statiques ou à animer si besoin) */}
+        {/* Tags */}
         <div className="flex flex-wrap gap-2 pt-2">
           {tags.map((tag) => (
             <span key={tag} className="px-2 py-0.5 bg-zinc-950/50 border border-zinc-800 rounded text-[9px] font-mono text-zinc-500 transition-colors">
@@ -82,9 +82,29 @@ export default function ProjectCard({ title, description, tags, bullets, image, 
           ))}
         </div>
 
+        {/* Liens avec target="_blank" */}
         <div className="flex gap-3 pt-3">
-          {live && <a href={live} className="flex-1 flex items-center justify-center gap-2 bg-zinc-800/50 hover:bg-emerald-500 text-zinc-400 hover:text-zinc-950 py-2.5 rounded-lg text-[9px] font-mono uppercase transition-all duration-300 border border-zinc-700/50 active:scale-95"><Globe size={12} /> Live</a>}
-          {github && <a href={github} className="flex-1 flex items-center justify-center gap-2 bg-zinc-800/50 hover:bg-emerald-500 text-zinc-400 hover:text-zinc-950 py-2.5 rounded-lg text-[9px] font-mono uppercase transition-all duration-300 border border-zinc-700/50 active:scale-95"><Code2 size={12} /> Repo</a>}
+          {live && (
+            <a 
+              href={live} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 bg-zinc-800/50 hover:bg-emerald-500 text-zinc-400 hover:text-zinc-950 py-2.5 rounded-lg text-[9px] font-mono uppercase transition-all duration-300 border border-zinc-700/50 active:scale-95"
+            >
+              <Globe size={12} /> Live
+            </a>
+          )}
+          
+          {github && (
+            <a 
+              href={github} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 bg-zinc-800/50 hover:bg-emerald-500 text-zinc-400 hover:text-zinc-950 py-2.5 rounded-lg text-[9px] font-mono uppercase transition-all duration-300 border border-zinc-700/50 active:scale-95"
+            >
+              <Code2 size={12} /> Repo
+            </a>
+          )}
         </div>
       </div>
     </div>
