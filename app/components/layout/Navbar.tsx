@@ -9,8 +9,10 @@ export default function Navbar() {
   const fontMontserrat = "font-[family-name:var(--font-montserrat)]";
 
   const handleDownload = () => {
+    // On force le type en MAJUSCULES pour correspondre au nom du fichier réel
+    const filePath = `/resumes/CV_Nicolas_Adamczyk_${lang}_${type.toUpperCase()}.pdf`;
+    
     const fileName = `CV_Nicolas_ADAMCZYK_${lang}${type === "ATS" ? "_ATS" : ""}.pdf`;
-    const filePath = `/resumes/CV_Nicolas_Adamczyk_${lang}_${type}.pdf`;
     const link = document.createElement("a");
     link.href = filePath;
     link.download = fileName;
