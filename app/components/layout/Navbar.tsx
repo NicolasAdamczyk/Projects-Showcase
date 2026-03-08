@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const handleDownload = () => {
     const fileName = `CV_Nicolas_ADAMCZYK_${lang}${type === "ATS" ? "_ATS" : ""}.pdf`;
-    const filePath = `/cv/CV_Nicolas_Adamczyk_${lang}_${type}.pdf`;
+    const filePath = `/project-showcase/cv/CV_Nicolas_Adamczyk_${lang}_${type}.pdf`;
     const link = document.createElement("a");
     link.href = filePath;
     link.download = fileName;

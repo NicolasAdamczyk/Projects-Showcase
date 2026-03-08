@@ -8,7 +8,15 @@ import InteractiveBackground from "./components/ui/InteractiveBackground";
 
 export const metadata = {
   title: "Nicolas Adamczyk | Showcase",
-  description: "Aerospace & AI Developer",
+  description: "Developer specializing in AI & Computer Vision - Available for apprenticeship.",
+  openGraph: {
+    title: "Nicolas Adamczyk | Portfolio",
+    description: "Developer specializing in AI & Computer Vision - Available for apprenticeship.",
+    url: "https://ton-site.vercel.app",
+    siteName: "Portfolio Nicolas Adamczyk",
+    locale: "fr_FR",
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "./icon.svg", type: "image/svg+xml" },
